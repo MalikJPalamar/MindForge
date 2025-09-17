@@ -1,0 +1,368 @@
+{
+  "chambers": [
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "subtitle": "Identify sequences and relationships",
+      "description": "Develop your ability to recognize patterns in visual, numerical, and logical sequences. This foundational skill helps in mathematics, programming, and analytical thinking.",
+      "icon": "🎯",
+      "difficulty": "beginner",
+      "unlockLevel": 1,
+      "puzzleCount": 25,
+      "categories": ["visual-patterns", "number-sequences", "shape-patterns"],
+      "learningObjectives": [
+        "Recognize visual patterns and sequences",
+        "Identify numerical progressions",
+        "Understand shape relationships",
+        "Develop systematic pattern analysis"
+      ],
+      "realWorldApplications": [
+        "Data analysis and trend identification",
+        "Programming and algorithm design",
+        "Mathematical problem solving",
+        "Art and design composition"
+      ]
+    },
+    {
+      "id": "logical-sequences",
+      "title": "Logical Sequences",
+      "subtitle": "Complete the logical progression",
+      "description": "Master the art of logical reasoning through sequential problem solving. Learn to identify logical relationships and predict outcomes based on given premises.",
+      "icon": "🔗",
+      "difficulty": "beginner",
+      "unlockLevel": 1,
+      "puzzleCount": 25,
+      "categories": ["basic-logic", "conditional-logic", "advanced-logic"],
+      "learningObjectives": [
+        "Understand logical implications",
+        "Master conditional reasoning",
+        "Apply deductive logic",
+        "Recognize logical fallacies"
+      ],
+      "realWorldApplications": [
+        "Critical thinking in decision making",
+        "Legal reasoning and argumentation",
+        "Scientific hypothesis testing",
+        "Computer programming logic"
+      ]
+    },
+    {
+      "id": "spatial-reasoning",
+      "title": "Spatial Reasoning",
+      "subtitle": "Visualize and manipulate objects",
+      "description": "Enhance your spatial intelligence through 3D visualization challenges. Develop the ability to mentally rotate, fold, and manipulate objects in space.",
+      "icon": "🎲",
+      "difficulty": "intermediate",
+      "unlockLevel": 3,
+      "puzzleCount": 25,
+      "categories": ["2d-spatial", "3d-visualization", "advanced-spatial"],
+      "learningObjectives": [
+        "Visualize 3D objects from 2D representations",
+        "Understand spatial transformations",
+        "Develop mental rotation abilities",
+        "Master perspective and projection"
+      ],
+      "realWorldApplications": [
+        "Engineering and architectural design",
+        "3D modeling and animation",
+        "Navigation and map reading",
+        "Surgery and medical procedures"
+      ]
+    },
+    {
+      "id": "deductive-reasoning",
+      "title": "Deductive Reasoning",
+      "subtitle": "Draw logical conclusions",
+      "description": "Strengthen deductive logic through systematic problem-solving approaches. Learn to draw valid conclusions from given premises using formal logical structures.",
+      "icon": "🔍",
+      "difficulty": "intermediate",
+      "unlockLevel": 5,
+      "puzzleCount": 25,
+      "categories": ["syllogisms", "formal-logic", "proof-techniques"],
+      "learningObjectives": [
+        "Master syllogistic reasoning",
+        "Understand formal logical structures",
+        "Apply proof techniques",
+        "Identify valid vs invalid arguments"
+      ],
+      "realWorldApplications": [
+        "Scientific research methodology",
+        "Legal case analysis",
+        "Mathematical proofs",
+        "Quality assurance and testing"
+      ]
+    },
+    {
+      "id": "inductive-reasoning",
+      "title": "Inductive Reasoning",
+      "subtitle": "Find general patterns",
+      "description": "Develop pattern recognition and generalization skills. Learn to make reasonable inferences and predictions based on observed patterns and limited data.",
+      "icon": "🧠",
+      "difficulty": "intermediate",
+      "unlockLevel": 7,
+      "puzzleCount": 25,
+      "categories": ["pattern-inference", "data-analysis", "hypothesis-formation"],
+      "learningObjectives": [
+        "Identify patterns from limited data",
+        "Form reasonable hypotheses",
+        "Understand probability and likelihood",
+        "Make evidence-based predictions"
+      ],
+      "realWorldApplications": [
+        "Market research and analysis",
+        "Medical diagnosis",
+        "Weather forecasting",
+        "Machine learning and AI"
+      ]
+    },
+    {
+      "id": "analytical-thinking",
+      "title": "Analytical Thinking",
+      "subtitle": "Break down complex problems",
+      "description": "Master systematic analysis of complex logical structures. Learn to decompose problems into manageable parts and synthesize solutions.",
+      "icon": "⚙️",
+      "difficulty": "advanced",
+      "unlockLevel": 10,
+      "puzzleCount": 25,
+      "categories": ["problem-decomposition", "systems-thinking", "synthesis"],
+      "learningObjectives": [
+        "Break down complex problems",
+        "Identify system relationships",
+        "Synthesize multiple perspectives",
+        "Apply systematic problem-solving"
+      ],
+      "realWorldApplications": [
+        "Business strategy and planning",
+        "Software system design",
+        "Research methodology",
+        "Project management"
+      ]
+    },
+    {
+      "id": "mathematical-logic",
+      "title": "Mathematical Logic",
+      "subtitle": "Apply mathematical reasoning",
+      "description": "Combine mathematical concepts with logical reasoning. Explore formal mathematical structures and their logical foundations.",
+      "icon": "📊",
+      "difficulty": "advanced",
+      "unlockLevel": 12,
+      "puzzleCount": 25,
+      "categories": ["formal-systems", "proof-theory", "set-theory"],
+      "learningObjectives": [
+        "Understand formal mathematical systems",
+        "Apply proof techniques",
+        "Work with mathematical abstractions",
+        "Understand logical foundations of mathematics"
+      ],
+      "realWorldApplications": [
+        "Computer science theory",
+        "Cryptography and security",
+        "Financial modeling",
+        "Scientific computing"
+      ]
+    },
+    {
+      "id": "verbal-reasoning",
+      "title": "Verbal Reasoning",
+      "subtitle": "Analyze language and meaning",
+      "description": "Develop logical reasoning through language and semantic analysis. Understand how language structure affects logical meaning and argumentation.",
+      "icon": "📝",
+      "difficulty": "intermediate",
+      "unlockLevel": 8,
+      "puzzleCount": 25,
+      "categories": ["semantic-analysis", "argument-structure", "language-logic"],
+      "learningObjectives": [
+        "Analyze argument structure",
+        "Understand semantic relationships",
+        "Identify logical connectives in language",
+        "Evaluate verbal arguments"
+      ],
+      "realWorldApplications": [
+        "Legal document analysis",
+        "Academic writing and research",
+        "Debate and persuasion",
+        "Natural language processing"
+      ]
+    },
+    {
+      "id": "conditional-logic",
+      "title": "Conditional Logic",
+      "subtitle": "Master if-then reasoning",
+      "description": "Learn complex conditional reasoning and logical implications. Master the subtleties of if-then statements and their logical consequences.",
+      "icon": "⚡",
+      "difficulty": "advanced",
+      "unlockLevel": 15,
+      "puzzleCount": 25,
+      "categories": ["conditional-statements", "logical-implications", "complex-conditions"],
+      "learningObjectives": [
+        "Master conditional statements",
+        "Understand logical implications",
+        "Work with complex conditions",
+        "Apply contrapositive reasoning"
+      ],
+      "realWorldApplications": [
+        "Programming and software logic",
+        "Policy analysis and formation",
+        "Game theory and strategy",
+        "Risk assessment and management"
+      ]
+    },
+    {
+      "id": "set-theory",
+      "title": "Set Theory Logic",
+      "subtitle": "Understand logical relationships",
+      "description": "Explore logical relationships through set theory applications. Understand how sets, unions, intersections, and logical operations relate.",
+      "icon": "🔢",
+      "difficulty": "expert",
+      "unlockLevel": 18,
+      "puzzleCount": 25,
+      "categories": ["set-operations", "logical-relations", "formal-structures"],
+      "learningObjectives": [
+        "Understand set relationships",
+        "Apply set operations logically",
+        "Work with formal logical structures",
+        "Connect set theory to logic"
+      ],
+      "realWorldApplications": [
+        "Database design and queries",
+        "Information theory",
+        "Computer science foundations",
+        "Mathematical research"
+      ]
+    },
+    {
+      "id": "logical-paradoxes",
+      "title": "Logical Paradoxes",
+      "subtitle": "Navigate complex contradictions",
+      "description": "Challenge your reasoning with famous logical paradoxes and their resolutions. Explore the limits and foundations of logical thinking.",
+      "icon": "🌀",
+      "difficulty": "expert",
+      "unlockLevel": 20,
+      "puzzleCount": 25,
+      "categories": ["classical-paradoxes", "self-reference", "logical-foundations"],
+      "learningObjectives": [
+        "Understand classical paradoxes",
+        "Analyze self-referential statements",
+        "Explore logical foundations",
+        "Develop nuanced thinking about logic"
+      ],
+      "realWorldApplications": [
+        "Philosophy and logic theory",
+        "Computer science foundations",
+        "Artificial intelligence ethics",
+        "Critical thinking in complex scenarios"
+      ]
+    },
+    {
+      "id": "meta-reasoning",
+      "title": "Meta-Reasoning",
+      "subtitle": "Reason about reasoning itself",
+      "description": "The ultimate challenge: applying logical reasoning to the process of reasoning. Explore how we think about thinking and the nature of rational thought.",
+      "icon": "🔮",
+      "difficulty": "expert",
+      "unlockLevel": 25,
+      "puzzleCount": 30,
+      "categories": ["meta-cognition", "reasoning-about-reasoning", "logical-reflection"],
+      "learningObjectives": [
+        "Understand meta-cognitive processes",
+        "Analyze reasoning strategies",
+        "Reflect on logical thinking",
+        "Develop reasoning about reasoning"
+      ],
+      "realWorldApplications": [
+        "Cognitive science research",
+        "Educational methodology",
+        "AI and machine learning design",
+        "Philosophy of mind and consciousness"
+      ]
+    }
+  ],
+
+  "difficultyProgression": {
+    "beginner": {
+      "requiredLevel": 1,
+      "focusAreas": ["basic patterns", "simple logic", "fundamental concepts"],
+      "expectedTimePerPuzzle": "2-5 minutes",
+      "characteristics": "Clear rules, obvious patterns, immediate feedback"
+    },
+    "intermediate": {
+      "requiredLevel": 5,
+      "focusAreas": ["complex patterns", "multi-step reasoning", "applied concepts"],
+      "expectedTimePerPuzzle": "5-10 minutes",
+      "characteristics": "Multiple variables, requires planning, strategic thinking"
+    },
+    "advanced": {
+      "requiredLevel": 12,
+      "focusAreas": ["abstract concepts", "formal systems", "deep analysis"],
+      "expectedTimePerPuzzle": "10-20 minutes",
+      "characteristics": "Abstract thinking, formal notation, complex interactions"
+    },
+    "expert": {
+      "requiredLevel": 18,
+      "focusAreas": ["theoretical foundations", "paradoxes", "meta-concepts"],
+      "expectedTimePerPuzzle": "15-30 minutes",
+      "characteristics": "Theoretical depth, counterintuitive solutions, philosophical implications"
+    }
+  },
+
+  "learningPathways": {
+    "foundation": {
+      "name": "Logical Foundation",
+      "description": "Build essential logical thinking skills",
+      "chambers": ["pattern-recognition", "logical-sequences"],
+      "duration": "2-4 weeks",
+      "prerequisites": "None"
+    },
+    "spatial": {
+      "name": "Spatial Intelligence",
+      "description": "Develop 3D visualization and spatial reasoning",
+      "chambers": ["spatial-reasoning", "mathematical-logic"],
+      "duration": "3-5 weeks",
+      "prerequisites": "Logical Foundation"
+    },
+    "analytical": {
+      "name": "Analytical Mastery",
+      "description": "Master complex analytical thinking",
+      "chambers": ["deductive-reasoning", "inductive-reasoning", "analytical-thinking"],
+      "duration": "6-8 weeks",
+      "prerequisites": "Logical Foundation"
+    },
+    "advanced": {
+      "name": "Advanced Logic",
+      "description": "Explore advanced logical concepts",
+      "chambers": ["conditional-logic", "set-theory", "verbal-reasoning"],
+      "duration": "8-10 weeks",
+      "prerequisites": "Analytical Mastery"
+    },
+    "expert": {
+      "name": "Expert Reasoning",
+      "description": "Master the highest levels of logical thinking",
+      "chambers": ["logical-paradoxes", "meta-reasoning"],
+      "duration": "10-12 weeks",
+      "prerequisites": "Advanced Logic"
+    }
+  },
+
+  "achievements": {
+    "chamber_completion": {
+      "bronze": "Complete any chamber",
+      "silver": "Complete 5 chambers",
+      "gold": "Complete all 12 chambers"
+    },
+    "streak_achievements": {
+      "bronze": "Solve 5 puzzles in a row",
+      "silver": "Solve 15 puzzles in a row",
+      "gold": "Solve 30 puzzles in a row"
+    },
+    "speed_achievements": {
+      "bronze": "Solve a puzzle in under 30 seconds",
+      "silver": "Solve 10 puzzles in under 1 minute each",
+      "gold": "Solve an expert puzzle in under 2 minutes"
+    },
+    "mastery_achievements": {
+      "bronze": "Achieve 90% accuracy in any chamber",
+      "silver": "Achieve 95% accuracy in 5 chambers",
+      "gold": "Achieve 98% accuracy in all chambers"
+    }
+  }
+}

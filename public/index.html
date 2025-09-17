@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MindForge: The 12 Chambers of Logic - Progressive cognitive training through interactive logic puzzles">
+    <meta name="theme-color" content="#2C3E50">
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Accessibility -->
+    <meta name="color-scheme" content="light dark">
+
+    <title>MindForge: The 12 Chambers of Logic</title>
+</head>
+<body>
+    <!-- Skip Navigation Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen" aria-hidden="true">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <h1>MindForge</h1>
+                <p>The 12 Chambers of Logic</p>
+            </div>
+            <div class="loading-spinner" aria-label="Loading..."></div>
+            <p class="loading-text">Preparing your cognitive journey...</p>
+        </div>
+    </div>
+
+    <!-- Main Application Container -->
+    <div id="app" class="app-container">
+
+        <!-- Header -->
+        <header class="app-header" role="banner">
+            <div class="header-content">
+                <div class="logo-section">
+                    <h1 class="app-title">MindForge</h1>
+                    <span class="app-subtitle">The 12 Chambers of Logic</span>
+                </div>
+
+                <nav class="main-nav" role="navigation" aria-label="Main navigation">
+                    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="hamburger"></span>
+                    </button>
+                    <ul id="nav-menu" class="nav-menu">
+                        <li><a href="#chambers" class="nav-link">Chambers</a></li>
+                        <li><a href="#progress" class="nav-link">Progress</a></li>
+                        <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                        <li><a href="#settings" class="nav-link">Settings</a></li>
+                    </ul>
+                </nav>
+
+                <div class="user-info">
+                    <div class="level-indicator">
+                        <span class="level-label">Level</span>
+                        <span id="user-level" class="level-value">1</span>
+                    </div>
+                    <div class="xp-bar">
+                        <div id="xp-progress" class="xp-fill" style="width: 0%"></div>
+                        <span id="xp-text" class="xp-text">0 / 100 XP</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main id="main-content" class="main-content" role="main">
+
+            <!-- Welcome Screen -->
+            <section id="welcome-screen" class="screen welcome-screen">
+                <div class="welcome-content">
+                    <h2>Welcome to Your Cognitive Journey</h2>
+                    <p>Embark on a progressive adventure through 12 unique chambers, each designed to strengthen different aspects of logical reasoning and critical thinking.</p>
+
+                    <div class="stats-overview">
+                        <div class="stat-card">
+                            <span class="stat-number" id="total-solved">0</span>
+                            <span class="stat-label">Puzzles Solved</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number" id="current-streak">0</span>
+                            <span class="stat-label">Current Streak</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number" id="chambers-unlocked">1</span>
+                            <span class="stat-label">Chambers Unlocked</span>
+                        </div>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button id="continue-journey" class="btn btn-primary btn-large">Continue Journey</button>
+                        <button id="daily-challenge" class="btn btn-secondary">Daily Challenge</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Chambers Overview -->
+            <section id="chambers-screen" class="screen chambers-screen" aria-hidden="true">
+                <h2>The 12 Chambers of Logic</h2>
+                <p class="screen-description">Each chamber focuses on different cognitive skills. Progress through them to unlock advanced reasoning abilities.</p>
+
+                <div class="chambers-grid" role="grid">
+                    <!-- Chambers will be dynamically populated by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Puzzle Screen -->
+            <section id="puzzle-screen" class="screen puzzle-screen" aria-hidden="true">
+                <div class="puzzle-header">
+                    <button id="back-to-chambers" class="btn btn-text" aria-label="Back to chambers">
+                        <span class="icon-arrow-left"></span> Back
+                    </button>
+                    <div class="puzzle-info">
+                        <h2 id="puzzle-title">Puzzle Title</h2>
+                        <div class="puzzle-meta">
+                            <span id="puzzle-difficulty" class="difficulty-badge">Easy</span>
+                            <span id="puzzle-number" class="puzzle-number">1 of 25</span>
+                        </div>
+                    </div>
+                    <div class="puzzle-actions">
+                        <button id="hint-btn" class="btn btn-secondary" aria-describedby="hint-description">
+                            <span class="icon-lightbulb"></span> Hint
+                        </button>
+                        <button id="settings-btn" class="btn btn-text" aria-label="Puzzle settings">
+                            <span class="icon-settings"></span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="puzzle-content">
+                    <div id="puzzle-container" class="puzzle-container" role="application" aria-label="Logic puzzle">
+                        <!-- Puzzle content will be dynamically loaded -->
+                    </div>
+
+                    <div class="puzzle-controls">
+                        <div class="hint-panel" id="hint-panel" aria-live="polite">
+                            <div class="hint-header">
+                                <h3>Hint <span id="hint-level">1</span>/3</h3>
+                                <button id="close-hint" class="btn btn-text" aria-label="Close hint">×</button>
+                            </div>
+                            <div id="hint-content" class="hint-content">
+                                <!-- Hint content -->
+                            </div>
+                            <div class="hint-actions">
+                                <button id="prev-hint" class="btn btn-text" disabled>Previous</button>
+                                <button id="next-hint" class="btn btn-text">Next Hint</button>
+                            </div>
+                        </div>
+
+                        <div class="answer-section">
+                            <div id="answer-input" class="answer-input">
+                                <!-- Answer input will be generated based on puzzle type -->
+                            </div>
+                            <div class="action-buttons">
+                                <button id="check-answer" class="btn btn-primary" disabled>Check Answer</button>
+                                <button id="reset-puzzle" class="btn btn-text">Reset</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feedback Modal -->
+                <div id="feedback-modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+                    <div class="modal-content">
+                        <div class="feedback-header">
+                            <div id="feedback-icon" class="feedback-icon"></div>
+                            <h3 id="feedback-title">Great Job!</h3>
+                        </div>
+                        <div id="feedback-message" class="feedback-message">
+                            <!-- Dynamic feedback content -->
+                        </div>
+                        <div class="feedback-actions">
+                            <button id="next-puzzle" class="btn btn-primary">Next Puzzle</button>
+                            <button id="review-solution" class="btn btn-secondary">Review Solution</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Progress Screen -->
+            <section id="progress-screen" class="screen progress-screen" aria-hidden="true">
+                <h2>Your Progress</h2>
+                <div class="progress-overview">
+                    <!-- Progress charts and statistics -->
+                </div>
+            </section>
+
+            <!-- Settings Screen -->
+            <section id="settings-screen" class="screen settings-screen" aria-hidden="true">
+                <h2>Settings</h2>
+                <div class="settings-content">
+                    <div class="settings-group">
+                        <h3>Accessibility</h3>
+                        <label class="setting-item">
+                            <input type="checkbox" id="high-contrast">
+                            <span>High contrast mode</span>
+                        </label>
+                        <label class="setting-item">
+                            <input type="checkbox" id="reduced-motion">
+                            <span>Reduce animations</span>
+                        </label>
+                        <label class="setting-item">
+                            <span>Font size</span>
+                            <select id="font-size">
+                                <option value="small">Small</option>
+                                <option value="medium" selected>Medium</option>
+                                <option value="large">Large</option>
+                            </select>
+                        </label>
+                    </div>
+
+                    <div class="settings-group">
+                        <h3>Game Preferences</h3>
+                        <label class="setting-item">
+                            <input type="checkbox" id="sound-effects" checked>
+                            <span>Sound effects</span>
+                        </label>
+                        <label class="setting-item">
+                            <input type="checkbox" id="auto-hints">
+                            <span>Show automatic hints after 2 minutes</span>
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="app-footer" role="contentinfo">
+            <div class="footer-content">
+                <p>&copy; 2024 MindForge. Designed for cognitive growth and accessibility.</p>
+                <div class="footer-links">
+                    <a href="#privacy">Privacy</a>
+                    <a href="#accessibility">Accessibility</a>
+                    <a href="#feedback">Feedback</a>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/app.js"></script>
+
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('sw.js')
+                    .then(function(registration) {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(function(registrationError) {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+{
+  "name": "mindforge-logic-chambers",
+  "version": "1.0.0",
+  "description": "MindForge: The 12 Chambers of Logic - Interactive cognitive training game",
+  "main": "public/index.html",
+  "scripts": {
+    "dev": "http-server public -p 8080 -o",
+    "build": "npm run build:css && npm run build:js",
+    "build:css": "cat src/css/main.css src/css/components/*.css src/css/layouts/*.css > public/css/style.css",
+    "build:js": "cat src/js/core/*.js src/js/chambers/*.js src/js/ui/*.js src/js/utils/*.js > public/js/app.js",
+    "test": "echo 'Tests will be implemented in future versions'",
+    "lint": "eslint src/js/**/*.js",
+    "serve": "http-server public -p 8080"
+  },
+  "keywords": [
+    "cognitive-training",
+    "logic-puzzles",
+    "educational-game",
+    "progressive-web-app",
+    "accessibility"
+  ],
+  "author": "MindForge Development Team",
+  "license": "MIT",
+  "dependencies": {
+    "http-server": "^14.1.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

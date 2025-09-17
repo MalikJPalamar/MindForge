@@ -1,0 +1,355 @@
+/*
+ * Header Component
+ * Main navigation and user interface elements
+ */
+
+.app-header {
+  background-color: var(--bg-primary);
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: var(--box-shadow);
+  position: sticky;
+  top: 0;
+  z-index: var(--z-dropdown);
+  transition: background-color var(--transition-normal);
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-md) var(--spacing-lg);
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
+
+/* Logo Section */
+.logo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.app-title {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: 0;
+  line-height: 1;
+}
+
+.app-subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  font-weight: 400;
+  margin-top: var(--spacing-xs);
+}
+
+/* Navigation */
+.main-nav {
+  justify-self: center;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  padding: var(--spacing-sm);
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  transition: background-color var(--transition-fast);
+}
+
+.nav-toggle:hover,
+.nav-toggle:focus {
+  background-color: var(--bg-secondary);
+}
+
+.hamburger {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--text-primary);
+  position: relative;
+  transition: background-color var(--transition-fast);
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: var(--text-primary);
+  transition: all var(--transition-fast);
+}
+
+.hamburger::before {
+  top: -8px;
+}
+
+.hamburger::after {
+  bottom: -8px;
+}
+
+.nav-toggle[aria-expanded="true"] .hamburger {
+  background-color: transparent;
+}
+
+.nav-toggle[aria-expanded="true"] .hamburger::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.nav-toggle[aria-expanded="true"] .hamburger::after {
+  transform: rotate(-45deg);
+  bottom: 0;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: var(--spacing-lg);
+}
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--spacing-sm) var(--spacing-md);
+  color: var(--text-secondary);
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  font-weight: 500;
+  transition: all var(--transition-fast);
+  position: relative;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--primary-color);
+  background-color: var(--bg-secondary);
+  text-decoration: none;
+}
+
+.nav-link.active {
+  color: var(--primary-color);
+  background-color: var(--bg-secondary);
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 2px;
+  background-color: var(--primary-color);
+}
+
+/* User Info Section */
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--spacing-xs);
+}
+
+.level-indicator {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  font-size: var(--font-size-sm);
+}
+
+.level-label {
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.level-value {
+  background-color: var(--primary-color);
+  color: white;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-sm);
+  font-weight: 600;
+  min-width: 24px;
+  text-align: center;
+}
+
+.xp-bar {
+  position: relative;
+  width: 120px;
+  height: 8px;
+  background-color: var(--bg-tertiary);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.xp-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--success-color), var(--primary-color));
+  border-radius: 4px;
+  transition: width var(--transition-normal);
+}
+
+.xp-text {
+  position: absolute;
+  top: -20px;
+  right: 0;
+  font-size: var(--font-size-xs);
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+  .header-content {
+    grid-template-columns: auto 1fr auto;
+    padding: var(--spacing-sm) var(--spacing-md);
+    gap: var(--spacing-md);
+  }
+
+  .app-title {
+    font-size: var(--font-size-xl);
+  }
+
+  .app-subtitle {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: block;
+    justify-self: center;
+  }
+
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--bg-primary);
+    border-top: 1px solid var(--border-color);
+    box-shadow: var(--box-shadow);
+    flex-direction: column;
+    padding: var(--spacing-md);
+    gap: 0;
+  }
+
+  .nav-toggle[aria-expanded="true"] + .nav-menu {
+    display: flex;
+  }
+
+  .nav-menu li {
+    width: 100%;
+  }
+
+  .nav-link {
+    width: 100%;
+    padding: var(--spacing-md);
+    justify-content: flex-start;
+  }
+
+  .nav-link.active::after {
+    display: none;
+  }
+
+  .user-info {
+    align-items: center;
+    flex-direction: row;
+    gap: var(--spacing-sm);
+  }
+
+  .xp-bar {
+    width: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-content {
+    grid-template-columns: 1fr auto;
+    gap: var(--spacing-sm);
+  }
+
+  .logo-section {
+    grid-column: 1 / -1;
+    order: 1;
+    align-self: start;
+  }
+
+  .main-nav {
+    order: 3;
+    justify-self: start;
+  }
+
+  .user-info {
+    order: 2;
+    justify-self: end;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: var(--spacing-xs);
+  }
+
+  .level-indicator {
+    font-size: var(--font-size-xs);
+  }
+
+  .xp-bar {
+    width: 60px;
+    height: 6px;
+  }
+
+  .xp-text {
+    font-size: 10px;
+    top: -16px;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .app-header {
+    border-bottom-width: 2px;
+  }
+
+  .nav-link {
+    border: 1px solid transparent;
+  }
+
+  .nav-link:hover,
+  .nav-link:focus,
+  .nav-link.active {
+    border-color: var(--primary-color);
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .nav-link,
+  .hamburger,
+  .hamburger::before,
+  .hamburger::after,
+  .xp-fill {
+    transition: none;
+  }
+}
+
+/* Dark mode specific adjustments */
+.dark-mode .app-header {
+  background-color: var(--dark-bg-secondary);
+  border-bottom-color: var(--dark-border-color);
+}
+
+.dark-mode .nav-toggle:hover,
+.dark-mode .nav-toggle:focus {
+  background-color: var(--dark-bg-tertiary);
+}
+
+@media (max-width: 768px) {
+  .dark-mode .nav-menu {
+    background-color: var(--dark-bg-secondary);
+    border-top-color: var(--dark-border-color);
+  }
+}
